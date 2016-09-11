@@ -5,7 +5,7 @@ If statments are a way for our applications to take different paths through our 
 var isTurnedOn = false;
 function flipSwitch(){
   if(isTurnedOn){
-    isTurnedOn = false;
+    isTurnedOn = false;    
   }
 }
 /*If/Else Statements
@@ -42,29 +42,59 @@ function makeCrazyLongString(string){
   }
 }
 
-
 /*makeCrazyLongString('taco');
 Function - youGetTaco
 Write a function that takes a single String parameter called action. If the value passed into our function is eat have the function return the String value EAT TACOS.
 */
+var eat = "eat";
+function youGetTaco(action){
+  if (action === eat){
+    return "EAT TACOS";
+  }
+} console.log(youGetTaco(eat));
 
 
 
 /*Function - isNumberGreaterThan
 Write a function that takes two variables of type Number called first and second respectively. Return true if the first number is greater than the second.*/
-
-
+function isNumberGreaterThan(first,second){
+  if (first>second){
+    return true;
+  }
+}
+console.log(isNumberGreaterThan(12,11));
 
 /*Function - isTrue
 Write a function that takes in a Boolean value named val and have the function return whether the value is true.*/
+var val = 12>11;
+function isTrue(){
+  if (val){
+    return "knew it";
+  }
+}
+console.log(isTrue(val));
 
-
+//I originally wrote: 
+//var val = true;
+//function isTrue(booleanMeBitch){
+  //if (booleanMeBitch = true);
+  //return "knew it";
+  //}
+  //console.log(isTrue(val)):
+  //whether I made val true or false it still printed "knew it"
 
 
 /*Function - isFalse
 Write a function that takes in a Boolean value named val and have the function return whether the value is false.*/
-
-
+var val = false;
+function isFalse(){
+  if (val){                     //why can't I put (val = false) - have that run true and not need an else statement?
+    return "true bruh"
+  } else{
+    return "ain't true bruh"
+  }
+}
+console.log(isFalse(val));
 
 
 /*Function - isEqual
