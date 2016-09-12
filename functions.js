@@ -12,7 +12,6 @@ function flipSwitch(){
 If/Else statments have the same behavior as our if statement above but we can add a secondary condition in the case that our if statement is not true to take another action instead. What if our light is already turned off when we flip the switch?
 
 In Human: If this condition is true, do something, else if it is false, do something else.*/
-
 var isTurnedOn = false;
 function flipSwitch(){
   if(isTurnedOn){
@@ -22,6 +21,7 @@ function flipSwitch(){
     isTurnedOn = true;
   }
 }
+
 /*For loops
 Sometimes we want to loop over a collection of data stored in an Arrayor inspect each character in a String. Or we just want to execute a block of code a set number of times before continuing on with the execution of our program. For loops allow us to execute a block of code and at the end of each iteration of our for loop we will evaluate a condition to determine if our loop should run again similar to our if statment.
 
@@ -46,12 +46,13 @@ function makeCrazyLongString(string){
 Function - youGetTaco
 Write a function that takes a single String parameter called action. If the value passed into our function is eat have the function return the String value EAT TACOS.
 */
-var eat = "eat";
-function youGetTaco(action){
-  if (action === eat){
-    return "EAT TACOS";
+function youGetTaco(string1){
+  if (string1 === "eat"){
+    return "EAT TACOS, bruh";
   }
-} console.log(youGetTaco(eat));
+}
+var eat = "eat";
+console.log(youGetTaco(eat));
 
 
 
@@ -79,7 +80,7 @@ console.log(isTrue(val));
 //function isTrue(booleanMeBitch){
   //if (booleanMeBitch = true);
   //return "knew it";
-  //}
+  //
   //console.log(isTrue(val)):
   //whether I made val true or false it still printed "knew it"
 
@@ -90,15 +91,28 @@ var val = false;
 function isFalse(){
   if (val){                     //why can't I put (val = false) - have that run true and not need an else statement?
     return "true bruh"
-  } else{
+  } 
+  else{
     return "ain't true bruh"
   }
-}
+} 
 console.log(isFalse(val));
-
 
 /*Function - isEqual
 Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.*/
+  var firstWord = "match";
+  var secondWord = "no match";
+function isEqual(word1,word2) {
+  if (word1 === word2){
+    return "AWWWRIGHT, AWWWRIGHT, AWWWRIGHT"
+  }
+  else {
+    return "y no can haz match?"
+  }
+}
+console.log(isEqual(firstWord,secondWord));
+
+
 
 
 /*Function - isNotEqual
@@ -149,4 +163,3 @@ Write a function that takes an Array with any number of type Number and second v
 
 /*Function - checkTrueValues
 Write a function that takes an Array with any number of type Boolean values and write a for loop to call our isTrue function with each value as input and return true if all values return true from our isTrue function.*/
-
