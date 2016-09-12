@@ -101,7 +101,7 @@ console.log(isFalse(val));
 /*Function - isEqual
 Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are equal otherwise return 'Y U NO MATCH!'.*/
   var firstWord = "match";
-  var secondWord = "no match";
+  var secondWord = "match";
 function isEqual(word1,word2) {
   if (word1 === word2){
     return "AWWWRIGHT, AWWWRIGHT, AWWWRIGHT"
@@ -112,27 +112,66 @@ function isEqual(word1,word2) {
 }
 console.log(isEqual(firstWord,secondWord));
 
-
-
-
 /*Function - isNotEqual
 Write a function that takes two variables of type String called firstWord and secondWord respectively. Return 'AWWWWRIGHT' if the two are not equal otherwise return 'Y U MATCH!'.*/
-
+var firstWord = "match";
+var secondWord = "no match";
+function isNotEqual(word1,word2){
+  if (word1 !== word2) {
+    return "AWWWRIGHT";
+  }
+  else {
+    return "y u match!";
+  }
+}
+console.log(isNotEqual(firstWord,secondWord));
 
 /*Function - doubleEquals
 Write a function that takes two variables of type Boolean called first and second respectively. Return true if both values are true otherwise return false.*/
 
-
+  var first = (15>12);
+  var second = ("15" == 15);
+function doubleEquals(boolean1,boolean2){
+    if (boolean1 && boolean2){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+console.log(doubleEquals(first,second));
 
 /*Function - totalOver30
 Write a function that takes three variables of type Number called first and second and third respectively. Return true if the sum of all values are greater than 30 otherwise return false.*/
-
-
+var first = 12;
+var second = 11;
+var third = 7.0000000001;
+function totalOver30(){
+  if (first+second+third>30){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+console.log(totalOver30());
 
 /*Function - totalUnderWhat
 Write a function that takes four variables of type Number called first and second and third and fourth respectively. Return true if the sum of first, second and third are less than fourth otherwise return false.*/
-
-
+var first = 1;
+var second = 2;
+var third = 3;
+var fourth = (first+second+third+1);
+function totalUnderWhat(){
+  if (first+second+third<fourth){
+    return true;
+  }
+  else{ 
+    return false;
+  }
+}
+console.log("underWhat: "+totalUnderWhat());
+//console.log(first,second,third,fourth);
 
 /*Function - looptoNumber
 Write a function that takes in a Number value named limit and have the function write a for loop that loops the number of times of limit and console.log each number as the loop executes.*/
