@@ -87,14 +87,15 @@ console.log(isTrue(val));
 
 /*Function - isFalse
 Write a function that takes in a Boolean value named val and have the function return whether the value is false.*/
+console.log("is false:");
 var val = false;
 function isFalse(){
-  if (val){                     //why can't I put (val = false) - have that run true and not need an else statement?
-    return "true bruh"
+  if (val === false){                     
+    return "ain't true bruh";
   } 
-  else{
-    return "ain't true bruh"
-  }
+  /*else{
+    return "true bruh";*/
+  
 } 
 console.log(isFalse(val));
 
@@ -104,10 +105,10 @@ Write a function that takes two variables of type String called firstWord and se
   var secondWord = "match";
 function isEqual(word1,word2) {
   if (word1 === word2){
-    return "AWWWRIGHT, AWWWRIGHT, AWWWRIGHT"
+    return "AWWWRIGHT, AWWWRIGHT, AWWWRIGHT";
   }
   else {
-    return "y no can haz match?"
+    return "y no can haz match?";
   }
 }
 console.log(isEqual(firstWord,secondWord));
@@ -190,7 +191,7 @@ Write a function that takes in a Array value named characters that has a sequenc
 var characters = ["P","u","n","k","-","A","s","s","-","B","i","t","c","h"];
 function showEachValue(){
   for (var i = 0; i<characters.length; i++){
-    console.log(characters[i]);  //or did you mean console.log(characters,[1]) <--messy
+    console.log(characters[i]);  
   }
 }
 showEachValue();
@@ -198,11 +199,30 @@ showEachValue();
 /*Function - createArrayFromString
 Write a function that takes a single variable of type String called word and write a for loop that creates an Array made up of each character in word except for "A" or "a". We don't want no stinking "A" or "a" in our Array. Note: You will need to use the Array.push() method to complete this function.*/
 
-
+var wurd = "Poopybutthead";
+function createArrayFromString(strang){
+  var arrizzy = [];
+  for (var i=0; i<strang.length; i++){
+    var currentLetter = strang.charAt(i);
+    if (strang[i]!=="a" && strang[i]!=="A"){
+      arrizzy.push(currentLetter);
+      }
+    } 
+    return arrizzy;
+}
+console.log(createArrayFromString(wurd));
 
 /*Function - greatSummator
 Write a function that takes an Array with any number of type Number and write a for loop to add all numbers in the Array and return the sum.*/
-
+var numba = [2,4,6,8];
+var sum = 0;
+function greatSummator(noomber){
+for (var i=0; i<noomber.length; i++){
+  sum += noomber[i];
+  }
+  return sum;
+} 
+console.log(greatSummator(numba));
 
 
 
